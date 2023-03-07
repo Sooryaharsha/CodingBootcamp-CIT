@@ -1,0 +1,10 @@
+create trigger IncrementWonGames
+after insert on MATCH
+for each row
+begin
+update TEAM
+ set WonGames = WonGames + 1
+ where
+ new.WonSetsTeam1=3 and Team = new.Team1 or
+ new.WonSetsTeam2=3 and Team = new.Team2
+end

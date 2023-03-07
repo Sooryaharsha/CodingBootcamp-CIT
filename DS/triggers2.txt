@@ -1,0 +1,8 @@
+create trigger UpdatePlayedMatches
+after insert on PLAYED
+for each row
+begin
+ update PLAYER
+ set PlayedMatches = PlayedMatches + 1
+ where PlayerId = new.PlayerId
+end
