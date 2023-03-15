@@ -1,14 +1,10 @@
-import matplotlib.pyplot as plt
+import numpy
 import random
+from matplotlib import pyplot as plt
 
-
-
-array=random.randint(0,5,1000000)
-#print(array)
-
-plt.hist(array, edgecolor="red",bins=100,color="black")
-plt.hist(array)
+a=[]
+for i in range(100000):
+    a.append(random.randint(0,100))
+x=numpy.array(a)
+plt.hist(x,bins=100,edgecolor='Black')
 plt.show()
-
-
-    
