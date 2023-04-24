@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 x = random.random()
 list=[]
 # Random float number
-for i in range(250):
-   list.append(random.uniform(0,5))
+#for i in range(250):
+list = (np.random.uniform(0,5,250))
 print("\nPrinting 250 random float values between 0 and 5\n")
-#print(list)
+#print(list)v
 
 sum=0
 for i in list:
@@ -25,4 +25,6 @@ print("The Standard Deviation is : ",statistics.stdev(list))
 print("The 75th percentile is : ",np.percentile(list,75))
 
 plt.hist(list)
+plt.xlabel("Value")
+plt.ylabel("Frequency")
 plt.show() 

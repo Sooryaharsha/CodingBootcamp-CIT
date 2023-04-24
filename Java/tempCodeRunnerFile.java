@@ -1,0 +1,1 @@
+Wage w[]= new Wage[wageEmp];

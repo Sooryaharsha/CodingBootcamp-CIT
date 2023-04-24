@@ -3,7 +3,7 @@ public class lab01{
     public static void main(String[] args){
        int arr[]=new int[5];
        int a,b,c,d;
-	   double result=0;
+	   
        Scanner input =  new Scanner(System.in);
        System.out.print("Enter value for a : ");
        a= input.nextInt();
@@ -20,20 +20,12 @@ public class lab01{
 	   }
 	   for(int i=0;i<arr.length;i++)
 	   {
-		   if(arr[i]%2!=0)
+		   double x=arr[i];
+		   if(x%2!=0)
 		   {
-			   double x=arr[i];
-			   a=0;
-			   c=0;
-			   result= (a*Math.pow(x,4)/4) + (b*Math.pow(x,3)/3) + (c*Math.pow(x,2)/2) + d*x;
-			   System.out.println("The Resultant value for "+x+" is "+result);
-		   }
-		   else
-		   {
-			    double x=arr[i];
-			   b=0;
-			   d=0;
-			   result= (a*Math.pow(x,4)/4) + (b*Math.pow(x,3)/3) + (c*Math.pow(x,2)/2) + d*x;
+			   double result=0;
+			   
+			   result= (a*Math.pow(x,4)/4)+(b*Math.pow(x,3)/3)  + (c*Math.pow(x,2)/2) + d*x   ;
 			   System.out.println("The Resultant value for "+x+" is "+result);
 		   }
 			   

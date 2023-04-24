@@ -1,5 +1,5 @@
 
-import numpy as np
+'''import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import norm
 import statistics
@@ -14,4 +14,5 @@ mean = statistics.mean(x_axis)
 sd = statistics.stdev(x_axis)
     
 plt.plot(x_axis, norm.pdf(x_axis, mean, sd))
-plt.show()
+plt.show()'''
+
