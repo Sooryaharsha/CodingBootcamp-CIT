@@ -1,1 +1,1 @@
-Wage w[]= new Wage[wageEmp];
+w[j].payslip
