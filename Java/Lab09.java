@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 class Employee{
 
     private String ename;
@@ -93,7 +93,7 @@ public class Lab09
         for(int i=0;i<noOfSalEmp;i++)
         { 
             System.out.print("\nEmployee name : ");
-            name = input.nextLine();
+            name = input.next();
             System.out.print("Employee ID : ");
             id = input.nextInt();
             System.out.print("Basic Pay : ");

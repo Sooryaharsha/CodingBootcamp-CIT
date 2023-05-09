@@ -1,0 +1,99 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Ex01",
+            "request": "launch",
+            "mainClass": "Ex01",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "Lab09",
+            "request": "launch",
+            "mainClass": "Lab09",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "Sortedarray",
+            "request": "launch",
+            "mainClass": "Sortedarray",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "lab01",
+            "request": "launch",
+            "mainClass": "lab01",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "lab02",
+            "request": "launch",
+            "mainClass": "lab02",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "lab04",
+            "request": "launch",
+            "mainClass": "lab04",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "lab05",
+            "request": "launch",
+            "mainClass": "lab05",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "lab06",
+            "request": "launch",
+            "mainClass": "lab06",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "lab07",
+            "request": "launch",
+            "mainClass": "lab07",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "lab08",
+            "request": "launch",
+            "mainClass": "lab08",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "practice",
+            "request": "launch",
+            "mainClass": "practice",
+            "projectName": "Java_f6a3e0d3"
+        },
+        {
+            "type": "java",
+            "name": "zoho",
+            "request": "launch",
+            "mainClass": "zoho",
+            "projectName": "Java_f6a3e0d3"
+        }
+    ]
+}
