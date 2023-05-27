@@ -27,9 +27,13 @@ class Loan{
 class VehicleLoan extends Loan{
     
 
-    VehicleLoan(String name,String address,int cifNo,int yearlyIncome,int principal,int yearOfRepayments)
+    VehicleLoan(String name,String address,int cifNo,int yearlyIncome,int principal,int yearOfRepayments) throws ArithmeticException 
     {
         super(name,address,cifNo,yearlyIncome,principal,yearOfRepayments);
+        if(yearOfRepayments<currentYear)
+        {
+            throw new ArithmeticException("Repayment year cannot be less than currentYear");
+        }
         noOfYears =  yearOfRepayments-currentYear;
         interestRate = noOfYears <= 10 ? 13 : 11;
     }
@@ -64,9 +68,13 @@ class VehicleLoan extends Loan{
 class HouseLoan extends Loan{
     
 
-    HouseLoan(String name,String address,int cifNo,int yearlyIncome,int principal,int yearOfRepayments)
+    HouseLoan(String name,String address,int cifNo,int yearlyIncome,int principal,int yearOfRepayments) throws ArithmeticException
     {
         super(name,address,cifNo,yearlyIncome,principal,yearOfRepayments);
+        if(yearOfRepayments<currentYear)
+        {
+            throw new ArithmeticException("Repayment year cannot be less than currentYear");
+        }
         noOfYears =  yearOfRepayments-currentYear;
         interestRate = noOfYears <= 10 ? 9 : 7;
     }
@@ -98,40 +106,31 @@ class HouseLoan extends Loan{
 }
 
 public class Cat01{
+
+    
     public static void main(String[] args) {
 
-        String name,address;
-        int cifNo,yearlyIncome,loanAmount,repaymentYear;
-
         Scanner input = new Scanner(System.in);
+        System.out.print("\nEnter the No of house Loans : ");
+        int y = input.nextInt();
 
-        System.out.println("Details for Vehicle Loan \n");
-        System.out.print("Enter the name : ");
-        name = input.nextLine();
-        System.out.print("Enter the Address : ");
-        address = input.nextLine();
-        System.out.print("Enter the CIF no : ");
-        cifNo = input.nextInt();
-        System.out.print("Enter the Yearly income : ");
-        yearlyIncome = input.nextInt();
-        System.out.print("Enter the Required Loan amount : ");
-        loanAmount = input.nextInt();
-        System.out.print("Enter the Repayment Year : ");
-        repaymentYear = input.nextInt();
+        VehicleLoan v[] = new VehicleLoan[y];
 
+        for(int i=0;i<y;i++){
 
-        System.out.println("-------------------------------------------------------------");
-        System.out.println("Vehicle Loan Details ");
-        System.out.println("-------------------------------------------------------------");
+            System.out.println("Details for Vehicle Loan \n");
+            v[i] = new VehicleLoan(getName(),getAddress(),getCifNo(),getYearlyIncome(),getLoanAmount(),getRepaymentyear());
+            v[i].calcEMI();
 
-        VehicleLoan v1 = new VehicleLoan(name,address,cifNo,yearlyIncome,loanAmount,repaymentYear);
-        v1.calcEMI();
-        v1.display();
-        System.out.println("-------------------------------------------------------------");
-        System.out.println();
-
+            System.out.println("-------------------------------------------------------------");
+            System.out.println("Vehicle Loan Details ");
+            System.out.println("-------------------------------------------------------------");
+            v[i].display();
+            System.out.println("-------------------------------------------------------------");
+            System.out.println();
+            
+        }
         
-
         int x;
         System.out.print("\nEnter the No of house Loans : ");
         x= input.nextInt();
@@ -140,29 +139,63 @@ public class Cat01{
         for(int i=0; i<x; i++)
         {
             System.out.println("Details for House Loan \n");
-            System.out.print("Enter the name : ");
-            name = input.next();
-            System.out.print("Enter the Address : ");
-            address = input.next();
-            System.out.print("Enter the CIF no : ");
-            cifNo = input.nextInt();
-            System.out.print("Enter the Yearly income : ");
-            yearlyIncome = input.nextInt();
-            System.out.print("Enter the Required Loan amount : ");
-            loanAmount = input.nextInt();
-            System.out.print("Enter the Repayment Year : ");
-            repaymentYear = input.nextInt();
-
+            h[i] = new HouseLoan(getName(),getAddress(),getCifNo(),getYearlyIncome(),getLoanAmount(),getRepaymentyear());
+            h[i].calcEMI();
 
             System.out.println("\n-------------------------------------------------------------");
             System.out.println("House Loan Details ");
             System.out.println("-------------------------------------------------------------");
-
-            h[i] = new HouseLoan(name,address,cifNo,yearlyIncome,loanAmount,repaymentYear);
-            h[i].calcEMI();
             h[i].display();
             System.out.println("-------------------------------------------------------------\n");
             
     }
+
 }
+    static String getName()
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the name : ");
+        String name = input.nextLine();
+        return name;
+    }
+
+    static String getAddress()
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the Address : ");
+        String address = input.nextLine();
+        return address;
+    }
+
+    static int getCifNo()
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the CIF no : ");
+        int cifNo = input.nextInt();
+        return cifNo;
+    }
+
+    static int getYearlyIncome()
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the Yearly income : ");
+        int yearlyIncome = input.nextInt();
+        return yearlyIncome;
+    }
+
+    static int getLoanAmount()
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the Required Loan amount : ");
+        int loanAmount = input.nextInt();
+        return loanAmount;
+    }
+
+    static int getRepaymentyear()
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the Repayment Year : ");
+        int repaymentYear = input.nextInt();
+        return repaymentYear;
+    }
 }

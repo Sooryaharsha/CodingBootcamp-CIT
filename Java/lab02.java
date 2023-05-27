@@ -5,6 +5,7 @@ class shape
 	int area,length,breadth,height;
 	int perimeter;
 	String shapetype;
+	static count;
 	
      shape()
 	{
@@ -93,7 +94,7 @@ public class lab02
 {
 	public static void main(String[] args)
 	{
-		//shape sh = new shape();
+		shape sh = new shape();
 		shape sh1 = new shape(10);
 		shape sh2 = new shape(6,8);
 		shape sh3 = new shape(3,4,5);
