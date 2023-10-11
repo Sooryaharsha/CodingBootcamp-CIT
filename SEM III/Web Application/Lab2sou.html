@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAM-2</title>
+    <link rel="stylesheet" href="Lab2_style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="continer-fluid">
+
+        <form action="#" id="ed">
+            <div class="row ">
+                <div class=" col-lg-12 col-md-12">
+                    <div class="jumbotron d-flex align-item-center justify-content-center">
+                        <h1 id="h">Bug Report Form</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-12">
+                    <label for="ti">Title:*</label>
+                </div>
+                <div class="col-lg-10 col-md-12">
+                    <input type="text" id="ti" placeholder="Enter Title" name="ti" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-2 col-md-12">
+                    <label for="des">Description:*</label>
+                </div>
+                <div class="col-lg-10 col-md-12">
+                    <input type="text" id="des" placeholder="Enter Description" name="des" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-2 col-md-12">
+                    <label for="os">Os:*</label>
+                </div>
+                <div class="col-lg-10 col-md-12">
+                    <select id="os" name="os">
+                        <option value="windows-11">windows-11</option>
+                        <option value="windows-10">windows-10</option>
+                        <option value="linux">linux</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-2 col-md-12">
+                    <label for="pro">Product:*</label>
+                </div>
+                <div class="col-lg-10 col-md-12">
+                    <select id="pro" name="pro">
+                        <option value="abc">abc</option>
+                        <option value="def">def</option>
+                        <option value="xyz">xyz</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-2 col-md-12">
+                    <label for="ver">Version:*</label>
+                </div>
+                <div class="col-lg-10 col-md-12">
+                    <input type="text" id="ver" placeholder="Enter version" name="ver" required>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-lg-2 col-md-12">
+                    <label for="lic">License:*</label>
+                </div>
+                <div class="col-lg-10 col-md-12">
+
+                    <div class="form-check">
+                        <input type="radio" id="radio1" name="free" value="free" checked>free
+                        <label class="form-check-label" for="radio1"></label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="radio2" name="business" value="business">business
+                        <label class="form-check-label" for="radio2"></label>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-lg-2 col-md-12">
+                    <label for="sec">Security:*</label>
+                </div>
+                <div class="col-lg-10 col-md-12">
+                    <select id="sec" name="sec">
+                        <option value="critical">critical</option>
+                        <option value="modrate">modrate</option>
+                        <option value="not urgent">not urgent</option>
+                    </select>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-lg-2 col-md-12">
+                    <label for="att">attachments:*</label>
+                </div>
+                <div class="col-lg-10 col-md-12">
+                    <input type="file" id="att" name="att" required>
+                </div>
+            </div>
+            <br>
+            <input type="button" value="send" class="btn btn-dark text-info btn-lg">
+
+        </form>
+    </div>
+</body>
+
+</html>

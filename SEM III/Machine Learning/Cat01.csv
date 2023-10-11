@@ -1,0 +1,11 @@
+Contract Length,Monthly Usage,Support Calls,Churn
+Medium,Average,one,No
+Long,low,two,No
+Small,high,three,Yes
+Medium,Average,one,No
+Medium,Average,two,Yes
+Long,low,one,No
+Small,high,three,Yes
+Medium,low,two,No
+Medium,Average,one,No
+Long,low,three,Yes

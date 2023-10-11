@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+* {
+  margin: 10 rem;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+
+  /* background-color: #60b347; */
+}
+
+.Login {
+  /* border: 3px solid black; */
+  width: 30%;
+  /* padding: 60px 80px 49px 12px; */
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  /* border: 5px solid; */
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  background: linear-gradient(to bottom left, #f9d423, #ff4e50);
+  border-radius: 25px;
+}
+
+.main {
+  font-size: larger;
+  align-items: center;
+  /* border: 1px solid; */
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin-top: 5%;
+  margin-bottom: 15%;
+}
+
+.username {
+  font-size: large;
+  padding: 20px;
+}
+
+.emailbox {
+  border: transparent 1px;
+  padding: 20px;
+}
+.password {
+  font-size: large;
+  padding: 20px;
+}
+
+.passwordbox {
+  border: transparent 1px;
+  padding: 20px;
+
+}
+
+.login {
+  border: transparent 1px;
+  padding: 20px;
+  margin-top: 3rem;
+  width: 20%;
+  cursor: pointer;
+}
+
+.title {
+  padding: 20px;
+  /* border: solid 1px; */
+  text-align: center;
+}

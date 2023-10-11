@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+* {
+  margin: 10 rem;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+  background: linear-gradient(to top left, rgb(239, 147, 147), rgb(250, 25, 25));
+  /* background-color: #60b347; */
+}
+
+main {
+  height: 75vh;
+  color: #040000;
+  display: flex;
+  margin-top: 5rem;
+  align-items: first baseline;
+  justify-content: first baseline;
+}
+
+.btn-find {
+  border: 5px solid black;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 10rem;
+  cursor: pointer;
+}
+
+.find-input {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  /* padding: 2rem 3rem; */
+  width: 50rem;
+  text-align: center;
+  /* display: block; */
+  /* margin-bottom: 3rem; */
+}
+
+.message {
+  text-align: center;
+  border: 3px solid #000000;
+  align-items: first baseline;
+  margin-top: -30%;
+  margin-left: 30%;
+  margin-bottom: 40%;
+  width: 40%;
+  border: 5px solid #000000;
+  padding: 30px;
+  font-size: 50 rem;
+  align-content: first baseline;
+}
+
+.find-input {
+  color: #000000;
+  /* align-content: center;
+  align-items: center; */
+  margin-left: 30%;
+  width: 20%;
+  border: 5px solid rgb(0, 0, 0);
+  padding: 20px;
+  position: relative;
+}
+
+.colorChange {
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+}
+
+.header {
+  padding-bottom: 1%;
+}
+
+.label {
+  font-size: 2rem;
+}

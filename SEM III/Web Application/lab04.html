@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Frontend</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            margin-top: 10px;
+        }
+
+        .result {
+            font-weight: bold;
+        }
+
+        #numericInput {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5">Professional Frontend</h1>
+
+        <div class="form-group">
+            <label for="dropdown">Select an option:</label>
+            <select id="dropdown" class="form-control">
+                <option value="Software Engineer">SDE</option>
+                <option value="Technical Lead">TL</option>
+                <option value="DevOps Engineer">DevOps</option>
+            </select>
+            <button class="btn btn-primary" onclick="getSelectedValue()">Get Selected Value</button>
+        </div>
+        <p class="result">Selected Value: <span id="selectedValue"></span></p>
+        <p class="result">Selected Text: <span id="selectedText"></span></p>
+
+        <div class="form-group">
+            <label>jQuery Object:</label>
+            <div id="jqueryObject" class="alert alert-info">This is a jQuery object.</div>
+            <button class="btn btn-primary" onclick="convertToString()">Convert to String</button>
+        </div>
+        <p class="result" id="convertedString"></p>
+
+        <button class="btn btn-danger" onclick="removeFromArray()">Remove Element</button>
+        <p class="result" id="arrayResult"></p>
+
+        <div id="parent">
+            <p>Child 1</p>
+            <p>Child 2</p>
+            <p>Child 3</p>
+        </div>
+        <button class="btn btn-primary" onclick="countChildren()">Count Children</button>
+        <p class="result" id="childCount"></p>
+
+        <div class="form-group">
+            <label for="numericInput">Enter a number:</label>
+            <input type="text" id="numericInput" class="form-control" oninput="restrictInput()">
+        </div>
+        <p class="result" id="restrictedResult"></p>
+    </div>
+    <script>
+        // Task 1: Get Selected Value and Text from Dropdown
+        function getSelectedValue() {
+            var selectedValue = $('#dropdown').val();
+            var selectedText = $('#dropdown option:selected').text();
+            $('#selectedValue').text(selectedValue);
+            $('#selectedText').text(selectedText);
+        }
+
+        // Task 2: Convert jQuery Object to String
+        function convertToString() {
+            var jqueryObject = $('#jqueryObject');
+            var convertedString = jqueryObject.text();
+            $('#convertedString').text(convertedString);
+        }
+
+        // Task 3: Remove Element from Array
+        var array = ['Book', 'knife', 'phone'];
+
+        function removeFromArray() {
+            var itemToRemove = 'knife';
+            array = $.grep(array, function (value) {
+                return value !== itemToRemove;
+            });
+            $('#arrayResult').text('Array: ' + array.join(', '));
+        }
+
+        // Task 4: Count Child Elements
+        function countChildren() {
+            var childCount = $('#parent').children().length;
+            $('#childCount').text('Child Count: ' + childCount);
+        }
+
+        // Task 5: Restrict Number Input
+        function restrictInput() {
+            var input = $('#numericInput');
+            input.val(input.val().replace(/[^0-9.]/g, ''));
+        }
+    </script>
+</body>
+
+</html>
